@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eb8ab39ed3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="modal__contain">
+            <img class="modal__img" src="images/img1.jpg" alt="">
+            <span class="close">X</span>
+        </div>
+        <picture class="slider__big">
+            <img class="big__img" src="images/img1.jpg" alt="">
+            <div class="slider__arrows">
+                <i onclick="back()" class="fa-solid fa-chevron-left"></i>
+                <i onclick="next()" class="fa-solid fa-chevron-right"></i>
+            </div>
+        </picture>
+      
+        <picture class="slider__small">
+            <img class="small__img active" src="images/img1.jpg" alt="">
+            <img class="small__img" src="images/img2.jpg" alt="">
+            <img class="small__img" src="images/img3.jpg" alt="">
+            <img class="small__img" src="images/img4.jpg" alt="">
+        </picture>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
