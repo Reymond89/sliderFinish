@@ -7,6 +7,7 @@ const modalContain = document.querySelector('.modal__contain');
 const closeImg = document.querySelector('.close');
 const imgModal = document.querySelector('.modal__img');
 
+  
 // imageSmall.forEach( small => {
 //     small.addEventListener('click', ()=> {
 //         const active = document.querySelector('.active');
@@ -30,7 +31,7 @@ contenedorBig.addEventListener('click', (e)=> {
 
     if(imagenClick.tagName === 'IMG'){
         modalContain.style.transform = 'scale(1)'
-        imageSmall.src = imgModal.src ;
+        imgModal.src = imagenClick.src ;
     } 
 })
 closeImg.addEventListener('click', ()=>{
@@ -52,9 +53,13 @@ for (let i = 0; i < imageSmall.length; i++) {
 }
 
 
-const images = [ 'images/img1.jpg', 'images/img2.jpg', 'images/img3.jpg', 'images/img4.jpg'  ]
+const images = [...imageSmall].map((e) => e.src);
+
+
+// [ 'images/img1.jpg', 'images/img2.jpg', 'images/img3.jpg', 'images/img4.jpg'  ]
 
 let num = 0;
+
 
 function changeSmall(e) {
    for (let i = 0; i < imageSmall.length; i++) {
