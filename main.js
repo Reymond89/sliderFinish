@@ -15,27 +15,6 @@ smallContainer.addEventListener('wheel', (e)=> {
 })
 
 
-
-
-
-
-// imageSmall.forEach( small => {
-//     small.addEventListener('click', ()=> {
-//         const active = document.querySelector('.active');
-//         active.classList.remove('active');
-//         small.classList.add('active');
-//         imageBig.src = small.src;
-//     })
-// } )
-
-
-// for (let i = 0; i < imageBig.length; i++) {
-//     imageBig[i].addEventListener('click', (e)=> {
-//         console.log(e)         
-//     })  
-// }
-
-
 contenedorBig.addEventListener('click', (e)=> {
    
    let imagenClick = e.target.parentNode.children[0]
@@ -50,10 +29,6 @@ closeImg.addEventListener('click', ()=>{
 
 })
 
-
-
-
-
 for (let i = 0; i < imageSmall.length; i++) {
     imageSmall[i].addEventListener('click', ()=> {
                 const active = document.querySelector('.active');
@@ -63,14 +38,9 @@ for (let i = 0; i < imageSmall.length; i++) {
             })  
 }
 
-
 const images = [...imageSmall].map((e) => e.src);
 
-
-// [ 'images/img1.jpg', 'images/img2.jpg', 'images/img3.jpg', 'images/img4.jpg'  ]
-
 let num = 0;
-
 
 function changeSmall(e) {
    for (let i = 0; i < imageSmall.length; i++) {
