@@ -2,12 +2,23 @@ const imageBig = document.querySelector('.big__img');
 const imageSmall = document.querySelectorAll('.small__img');
 const active = document.querySelector('.active');
 const contenedorBig = document.querySelector('.slider__big');
-
 const modalContain = document.querySelector('.modal__contain');
 const closeImg = document.querySelector('.close');
 const imgModal = document.querySelector('.modal__img');
+const smallContainer = document.querySelector('.slider__small');
+let scrollLine = document.querySelector('.scroll');
 
-  
+smallContainer.addEventListener('wheel', (e)=> {
+    e.preventDefault();
+    smallContainer.scrollLeft += e.deltaY;
+    scrollLine.style.width = smallContainer.scrollLeft / 2 + 'px';
+})
+
+
+
+
+
+
 // imageSmall.forEach( small => {
 //     small.addEventListener('click', ()=> {
 //         const active = document.querySelector('.active');
